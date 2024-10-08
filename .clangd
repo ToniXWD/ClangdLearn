@@ -1,0 +1,22 @@
+CompileFlags:
+  Add:
+    - "-Wall" # 启用所有警告
+    - "-Wextra" # 启用额外警告
+    - "-std=c++20" # 使用C++20标准
+    - "-Iinclude" # 包含头文件, 相对路径
+    - "-isystemF:/software/vcpkg/installed/x64-windows/include" # 包含头文件, 绝对路径
+
+
+Diagnostics:
+  ClangTidy:
+    Add: ["cppcoreguidelines-*", "modernize-*", "performance-*"]
+    Remove: ["clang-analyzer-*"]
+
+InlayHints:
+  Enabled: true
+  ParameterNames: true
+  DeducedTypes: true
+  Designators: true
+
+Completion:
+  AllScopes: true
